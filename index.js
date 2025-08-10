@@ -25,7 +25,7 @@ app.use("/api/auth", authRoutes);
 
 const PORT = process.env.PORT || 5050;
 
-mongoose.connect(process.env.MONGO_URL)
+mongoose.connect(process.env.MONGO_URL || "mongodb+srv://akshay2001singh:CdpGFiwJoyHJBIrH@cluster0.j1xgzmo.mongodb.net/")
     .then(() => {
         console.log("✅ DB Connection Successful");
         app.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
